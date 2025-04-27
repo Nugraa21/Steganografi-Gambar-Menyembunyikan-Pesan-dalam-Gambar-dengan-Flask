@@ -105,7 +105,7 @@ Proses Dekripsi (Membaca Pesan)
 
 ## Prinsip Steganografi
 
-    Steganografi adalah teknik untuk menyembunyikan pesan dalam media lain (dalam hal ini gambar), sehingga pesan tersebut tidak dapat terlihat dengan kasat mata. Prinsip dasar yang digunakan dalam proyek ini adalah Least Significant Bit (LSB). Teknik ini mengganti bit terakhir (bit yang paling tidak signifikan) dalam representasi warna RGB dari gambar dengan bit pesan yang ingin disembunyikan.
+>Steganografi adalah teknik untuk menyembunyikan pesan dalam media lain (dalam hal ini gambar), sehingga pesan tersebut tidak dapat terlihat dengan kasat mata. Prinsip dasar yang digunakan dalam proyek ini adalah Least Significant Bit (LSB). Teknik ini mengganti bit terakhir (bit yang paling tidak signifikan) dalam representasi warna RGB dari gambar dengan bit pesan yang ingin disembunyikan.
 
 ## Teori
 
