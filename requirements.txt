@@ -1,0 +1,14 @@
+Flask==2.3.2
+Pillow==9.5.0
+Werkzeug==2.3.6
+Flask: Framework web yang digunakan untuk membangun aplikasi.
+
+Pillow: Library untuk memproses gambar (sebagai pengganti dari PIL).
+
+Werkzeug: Library yang digunakan oleh Flask untuk menangani file upload.
+
+Kamu bisa menambahkan versi spesifik sesuai dengan yang kamu gunakan, atau membiarkan versi terbaru sesuai dengan kebutuhan proyek.
+
+Untuk menginstal dependensi ini, cukup jalankan:
+
+pip install -r requirements.txt

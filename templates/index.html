@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+    background: #f7f7f7;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+input[type="file"], textarea {
+    margin-top: 20px;
+    padding: 10px;
+    width: 300px;
+    max-width: 90%;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.btn-secondary {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-secondary:hover {
+    background-color: #007B9E;
+}
+
+.result {
+    margin-top: 30px;
+}
+
+img {
+    margin-top: 20px;
+    max-width: 400px;
+    border: 2px solid #ccc;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Steganografi - Masukkan Pesan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Steganografi - Sembunyikan Pesan</h1>
+
+        <form method="POST" action="/encode" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required><br>
+            <textarea name="message" placeholder="Tulis pesanmu di sini..." required></textarea><br>
+            <button type="submit">Sisipkan Pesan</button>
+        </form>
+
+        {% if encoded_image %}
+        <div class="result">
+            <h2>✅ Gambar Berhasil Disisipi!</h2>
+            <img src="{{ url_for('static', filename='uploads/' + encoded_image.split('/')[-1]) }}" alt="Encoded Image">
+            <a href="/">🔙 Kembali</a>
+        </div>
+        {% endif %}
+
+        <a href="/decode" class="btn-secondary">🔍 Buka Pesan dari Gambar</a>
+    </div>
+</body>
+</html>
